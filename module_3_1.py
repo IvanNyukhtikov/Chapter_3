@@ -1,4 +1,3 @@
-calls = 0
 
 def count_calls():
     global calls
@@ -16,6 +15,8 @@ def  is_contains (string, list_to_search):
             return True
         else:
             return False
+
+calls = 0
 
 str_1 = 'Овца'
 str_info = string_info(str_1)
