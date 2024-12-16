@@ -1,5 +1,5 @@
 
-def check_add(add):
+def check_add(add):   # Проверка адреса электронной почты
     if "@" in add:
         if ".com" in add or ".ru" in add or ".net" in add:
             flag = True
@@ -10,9 +10,7 @@ def check_add(add):
     return flag
 
 def send_email (message, recipient, *, sender = "university.help@gmail.com"):
-    check_recipient = check_add(recipient)
-    check_sender = check_add(sender)
-    if check_recipient == False or check_sender == False:
+    if check_add(recipient) == False or check_add(sender) == False:
         print("Невозможно отправить письмо с адреса ", sender, "на адрес ", recipient)
     elif recipient == sender:
         print("Нельзя отправить письмо самому себе!")
